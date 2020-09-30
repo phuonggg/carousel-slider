@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import "./style.css";
 import Arrows from "../Arrows";
 import Item from "../Item";
-
-// const moveLeft = (index) => {
-//   console.log("left");
-// };
-
-// const moveRight = () => {
-//   console.log("right");
-// };
+import Indicators from "../Indicators";
 
 function Items({ data }) {
-  let myIndex = (index) => {
-    console.log("XXXX", index);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const updateIndex = (index) => {
+    setActiveIndex(index);
   };
   return (
     <div className="carousel">
@@ -21,18 +14,19 @@ function Items({ data }) {
         {data.map((item, index) => {
           return (
             <Item
+              currentIndex={index}
+              activeIndex={activeIndex}
               key={index}
-              content={item.content}
-              author={item.author}
-              source={item.source}
+              src={item.src}
             />
           );
         })}
       </ul>
-      <Arrows
+      <Arrows data={data} updateIndex={updateIndex} />
+      <Indicators
         data={data}
-        myIndex={myIndex}
-        // moveLeft={moveLeft} moveRight={moveRight}
+        updateIndex={updateIndex}
+        activeIndex={activeIndex}
       />
     </div>
   );

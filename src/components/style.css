@@ -1,20 +1,14 @@
-ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
 .carousel-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   min-height: 210px;
 }
 
@@ -31,6 +25,11 @@ ul {
   text-align: center;
 }
 
+.carousel__slide img {
+  display: block;
+  width: 100%;
+}
+
 @media (max-width: 991px) {
   .carousel__slide {
     padding-right: 60px;
@@ -40,6 +39,24 @@ ul {
 
 .carousel__slide--active {
   display: block;
+
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .carousel-slide__content {
@@ -78,11 +95,15 @@ ul {
   display: block;
   color: #111;
   cursor: pointer;
-  opacity: 0.75;
+  opaty: 0.75;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
   transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.carousel__arrow svg {
+  font-size: 5em;
 }
 
 .carousel__arrow:focus {
@@ -107,11 +128,11 @@ ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -134,7 +155,8 @@ ul {
   opacity: 0.5;
 }
 
-.carousel__indicator--active, .carousel__indicator--active:hover {
+.carousel__indicator--active,
+.carousel__indicator--active:hover {
   opacity: 0.75;
 }
 /*# sourceMappingURL=style.css.map */

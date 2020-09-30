@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import "./style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
-function Arrows({ data, myIndex }) {
-  // { moveLeft, moveRight }
-  const [currentIndex, setCurrentIndex] = useState(-1);
-  // console.log("YOOOOOOOO", currentIndex);
+const angleLeft = <FontAwesomeIcon icon={faAngleLeft} />;
+const angleRight = <FontAwesomeIcon icon={faAngleRight} />;
+
+function Arrows({ data, updateIndex }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <>
       <a
@@ -12,7 +14,7 @@ function Arrows({ data, myIndex }) {
         onClick={(e) => {
           e.preventDefault();
           let index = currentIndex;
-          let slidesLength = data.length - 1;
+          let slidesLength = data.length;
           if (index < 1) {
             index = slidesLength;
           }
@@ -20,11 +22,11 @@ function Arrows({ data, myIndex }) {
           --index;
 
           setCurrentIndex(index);
-          myIndex(index);
+          updateIndex(index);
         }}
         className="carousel__arrow carousel__arrow--left"
       >
-        <span className="fa fa-2x fa-angle-right"></span>
+        {angleLeft}
       </a>
       <a
         href="#"
@@ -37,13 +39,12 @@ function Arrows({ data, myIndex }) {
           }
 
           ++index;
-          console.log("INDEX", index);
           setCurrentIndex(index);
-          myIndex(index);
+          updateIndex(index);
         }}
         className="carousel__arrow carousel__arrow--right"
       >
-        <span className="fa fa-2x fa-angle-left"></span>
+        {angleRight}
       </a>
     </>
   );

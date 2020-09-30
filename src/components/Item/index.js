@@ -1,15 +1,13 @@
 import React from "react";
-import "./style.css";
 
-function Item({ currentIndex, content, author, source }) {
-  console.log("current index", currentIndex);
+function Item({ currentIndex, activeIndex, src }) {
   return (
-    <li className="carousel__slide ">
-      <p className="carousel-slide__content">{content}</p>
-      <p>
-        <strong className="carousel-slide__author">{author}</strong>
-        <small className="carousel-slide__source">{source}</small>
-      </p>
+    <li
+      className={`carousel__slide ${
+        currentIndex === activeIndex ? "carousel__slide--active" : ""
+      }`}
+    >
+      <img src={src}></img>
     </li>
   );
 }

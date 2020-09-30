@@ -1,44 +1,14 @@
 export const carouselSlidesData = [
   {
-    content:
-      "Tomorrow, you will be released. If you are bored of brawling with thieves and want to achieve something there is a rare blue flower that grows on the eastern slopes. Pick one of these flowers. If you can carry it to the top of the mountain, you may find what you were looking for in the first place.",
-    author: "Bane",
-    source: "facebook",
+    src:
+      "https://images.unsplash.com/photo-1548426590-4459d4dd2a42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
   },
   {
-    content:
-      "You have learn to bury your guilt with anger. I will teach you to confront it and to face the truth.",
-    author: "Ra's Al Ghul",
-    source: "Snapchat",
+    src:
+      "https://images.unsplash.com/photo-1560461492-21ad54929ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
   },
   {
-    content:
-      "Introduce a little anarchy, upset the established order and everything becomes chaos. I'm an agent of chaos. Oh, and you know the thing about chaos? It's fair.",
-    author: "Joker",
-    source: "facebook",
-  },
-  {
-    content:
-      "I can't do that as Bruce Wayne... as a man. I'm flesh and blood. I can be ignored, destroyed. But as a symbol, I can be incorruptible, I can be everlasting.",
-    author: "Bruce Wayne",
-    source: "facebook",
-  },
-  {
-    content:
-      "But it's not who you are underneath... it's what you do that defines you.",
-    author: "Rachel Dawes",
-    source: "twitter",
-  },
-  {
-    content:
-      "When their enemies were at the gates the Romans would suspend democracy and appoint one man to protect the city. It wasn't considered an honor, it was a public service.",
-    author: "John Blake",
-    source: "Google+",
-  },
-  {
-    content:
-      "Master Wayne, you've been gone a long time. You look very fashionable. Apart from the mud.",
-    author: "Alfred Pennyworth",
-    source: "twitter",
+    src:
+      "https://images.unsplash.com/photo-1573871479130-668ef53585dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
   },
 ];
