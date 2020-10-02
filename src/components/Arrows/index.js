@@ -5,23 +5,19 @@ import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 const angleLeft = <FontAwesomeIcon icon={faAngleLeft} />;
 const angleRight = <FontAwesomeIcon icon={faAngleRight} />;
 
-function Arrows({ data, updateIndex }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+function Arrows({ data, updateIndex, activeIndex }) {
   return (
     <>
       <a
         href="#"
         onClick={(e) => {
           e.preventDefault();
-          let index = currentIndex;
+          let index = activeIndex;
           let slidesLength = data.length;
           if (index < 1) {
             index = slidesLength;
           }
-
           --index;
-
-          setCurrentIndex(index);
           updateIndex(index);
         }}
         className="carousel__arrow carousel__arrow--left"
@@ -32,14 +28,12 @@ function Arrows({ data, updateIndex }) {
         href="#"
         onClick={(e) => {
           e.preventDefault();
-          let index = currentIndex;
+          let index = activeIndex;
           let slidesLength = data.length - 1;
           if (index === slidesLength) {
             index = -1;
           }
-
           ++index;
-          setCurrentIndex(index);
           updateIndex(index);
         }}
         className="carousel__arrow carousel__arrow--right"

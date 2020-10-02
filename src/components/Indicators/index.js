@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Arrows from "../Arrows";
 import Indicator from "../Indicator";
 
 function Indicators({ data, updateIndex, activeIndex }) {

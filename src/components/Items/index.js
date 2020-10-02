@@ -22,7 +22,7 @@ function Items({ data }) {
           );
         })}
       </ul>
-      <Arrows data={data} updateIndex={updateIndex} />
+      <Arrows data={data} updateIndex={updateIndex} activeIndex={activeIndex} />
       <Indicators
         data={data}
         updateIndex={updateIndex}
